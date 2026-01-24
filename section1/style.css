@@ -1,0 +1,10 @@
+input {
+  margin: 2px;
+}
+button {
+  margin: 1rem;
+}
+
+.input-error {
+  border: 1px solid red;
+}
