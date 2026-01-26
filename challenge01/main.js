@@ -17,6 +17,13 @@ function MyApp() {
 
   let circleColor = isPurple ? "purple" : "";
   let circleClass = `circle ${textColor}`;
+  const circleStyle = {
+    backgroundColor: circleColor,
+    height: `${circleSize}px`,
+    width: `${circleSize}px`,
+    lineHeight: `${circleSize}px`,
+    transform: `rotate(${circleRotate}deg)`,
+  };
 
   return (
     <main>
@@ -45,15 +52,7 @@ function MyApp() {
         Circle Rotate
         <input type="number" value={circleRotate} onChange={(e) => setCircleRotate(e.target.value)} />
       </label>
-      <div
-        className={circleClass}
-        style={{
-          backgroundColor: circleColor,
-          height: `${circleSize}px`,
-          width: `${circleSize}px`,
-          transform: `rotate(${circleRotate}deg)`,
-        }}
-      >
+      <div className={circleClass} style={circleStyle}>
         Hi!
       </div>
     </main>
